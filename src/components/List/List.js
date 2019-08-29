@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import React from 'react';
 import styles from './List.scss';
 import Hero from '../Hero/Hero';
@@ -8,7 +9,6 @@ import ReactHtmlParser from 'react-html-parser';
 import Creator from '../Creator/Creator';
 
 class List extends React.Component {
-    
   state = {
     columns: this.props.columns || [],
   };
@@ -17,6 +17,7 @@ class List extends React.Component {
     title: PropTypes.node.isRequired,
     description: PropTypes.node,
     columns: PropTypes.array,
+    image: PropTypes.string,
   };
 
   static defaultProps = {

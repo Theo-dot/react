@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import React from 'react';
 import styles from './Column.scss';
 import PropTypes from 'prop-types';
@@ -7,7 +8,6 @@ import Creator from '../Creator/Creator';
 import {settings} from '../../data/dataStore';
 
 class Column extends React.Component {
-  
   state = {
     cards: this.props.cards || [],
   };
@@ -46,9 +46,10 @@ class Column extends React.Component {
           </span>
         </h3>
         <div>
-          {this.props.cards.map(({key, ...cardData})  =>
+          {this.props.cards.map(({key, ...cardData}) =>
             <Card key={key} {...cardData} />
           )}
+          {console.log(this.props.cards)}
         </div>
         <div className={styles.creator}>
           <Creator
