@@ -5,6 +5,7 @@ import {pageContents, listData} from '../../data/dataStore';
 import ReactHtmlParser from 'react-html-parser';
 
 class App extends React.Component {
+  
   render() {
     return (
       <main className={styles.component}>
