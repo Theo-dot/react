@@ -14,6 +14,18 @@ export const settings = {
   defaultColumnIcon: 'list-alt',
 };
 
+export const infoSettings = {
+  title: 'About Me',
+  image: 'https://i.postimg.cc/NFH1VJxx/cloud-forest-conifers-environment-2529973.jpg',
+  content: 'Hi! THIS IS MY FIRST APP!',
+};
+
+export const faqSettings = {
+  title: 'FAQ',
+  image: 'https://i.postimg.cc/FHZ02J0w/countryside-distance-explore-2902747.jpg',
+  content: 'Question?',
+};
+
 export const pageContents = {
   title: 'My first React app',
   subtitle: 'A simple to-do app, with lists, columns and cards',
