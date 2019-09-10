@@ -16,13 +16,13 @@ export const settings = {
 
 export const infoSettings = {
   title: 'About Me',
-  image: 'https://i.postimg.cc/NFH1VJxx/cloud-forest-conifers-environment-2529973.jpg',
+  image: 'https://i.ibb.co/GQ97zCx/cloud-forest-conifers-environment-2529973.png',
   content: 'Hi! THIS IS MY FIRST APP!',
 };
 
 export const faqSettings = {
   title: 'FAQ',
-  image: 'https://i.postimg.cc/FHZ02J0w/countryside-distance-explore-2902747.jpg',
+  image: 'https://i.ibb.co/RgmmHj3/countryside-distance-explore-2902747.png',
   content: 'Question?',
 };
 
@@ -87,11 +87,24 @@ export const listData = {
 const lists = [
   {
     id: 'list-1',
-    title: 'Things to do <sup>soon!</sup>',
+    title: 'Books',
     description: 'Interesting things I want to check out!',
     image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
   },
+  {
+    id: 'list-2',
+    title: 'Movies',
+    description: 'Check out!',
+    image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+  },
+  {
+    id: 'list-3',
+    title: 'Games',
+    description: 'Enjoy!',
+    image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+  },
 ];
+
 
 const columns = [
   {

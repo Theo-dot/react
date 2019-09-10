@@ -1,21 +1,34 @@
 /* eslint-disable linebreak-style */
 import shortid from 'shortid';
 
-// selectors
-export const getCardsForColumn = ({cards, searchString}, columnId) =>
-  cards.filter(card => card.columnId == columnId && new RegExp(searchString, 'i').test(card.title));
+export const getCardsForColumn = ({cards}, columnId) =>
+  cards.filter(card => card.columnId == columnId);
 
-// action name creator
+export const getCardsForSearch = ({cards, columns}, searchString) => {
+  
+  cards = cards.filter(card =>
+    new RegExp(searchString, 'i').test(card.title)
+  );
+
+  return cards.map(card => {
+
+    const foundColumn = columns.filter(column => card.columnId == column.id);
+    const foundList = foundColumn[0].listId;
+
+    return {
+      ...card,
+      listId: foundList,
+    };
+  });
+};
+
 const reducerName = 'cards';
 const createActionName = name => `app/${reducerName}/${name}`;
 
-// action types
 export const ADD_CARD = createActionName('ADD_CARD');
 
-// action creators
 export const createAction_addCard = payload => ({payload, type: ADD_CARD});
 
-// reducer
 export default function reducer(state = [], action = {}) {
   switch (action.type) {
     case ADD_CARD:
