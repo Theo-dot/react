@@ -36,6 +36,12 @@ class Search extends React.Component {
     this.props.history.push(`/search/${this.state.value}`);
   }
 
+  handlePress = (keyEvent) => {
+    if (keyEvent.key === 'Enter') {
+      this.props.history.push(`/search/${this.state.value}`);
+    }
+  }
+
   UNSAFE_componentWillReceiveProps(newProps) {
     this.setState({value: newProps.searchString});
   }
@@ -51,8 +57,9 @@ class Search extends React.Component {
             placeholder={text}
             value={value}
             onChange={event => this.handleChange(event)}
+            onKeyPress={this.handlePress}
           />
-          <Button className={styles.buttons} onClick={() => this.handleOK()}>
+          <Button className={styles.buttons} onClick={() => this.handleOK()} >
             <Icon name={icon} />
           </Button>
           <div>
